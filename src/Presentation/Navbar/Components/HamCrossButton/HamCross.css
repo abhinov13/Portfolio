@@ -1,0 +1,58 @@
+:root{
+    --lineHeight: 7%;
+    --space: calc((100% - (3 * var(--lineHeight))) / 4);
+}
+
+.base{
+    position: relative;
+    min-height: 100%;
+    min-width: 100%;
+    aspect-ratio: 1/1;
+    background-color:rgba(0, 0, 0, 0);
+    z-index: 2;
+}
+
+.base div{
+    position: absolute;
+    height: var(--lineHeight);
+    width: 90%;
+    left: 5%;
+    transition: all 0.3s;
+    background-color: aliceblue;
+}
+
+.base div:nth-child(1)
+{
+    top: var(--space);
+    transform: rotate(0deg);
+}
+
+.base div:nth-child(2)
+{
+    top: calc(var(--space)*2 + var(--lineHeight));
+    opacity: 1;
+}
+
+.base div:nth-child(3)
+{
+    top: calc((var(--space)*3) + (var(--lineHeight)*2));
+    transform: rotate(0deg);
+}
+
+
+.open div:nth-child(1)
+{
+    top: calc((100% - var(--lineHeight)*2)/2);
+    transform: rotate(45deg);
+}
+
+.open div:nth-child(2)
+{
+    opacity: 0;
+}
+
+.open div:nth-child(3)
+{
+    top: calc((100% - var(--lineHeight)*2)/2);
+    transform: rotate(-45deg);
+}
