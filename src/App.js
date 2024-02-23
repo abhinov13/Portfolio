@@ -1,13 +1,13 @@
 import './App.css';
-import AboutMe from './Presentation/AboutMe/AboutMe';
+import Home from './Presentation/Home/Home';
 import Navbar from './Presentation/Navbar/Navbar';
 
 function App() {
 
   return (
-    <div className="App" style={{ background: "url(/background.jpg)", backgroundRepeat: "no-repeat", backgroundSize: "cover" }} >
+    <div className="App">
       <Navbar />
-      <AboutMe />
+      <Home />
     </div>
   );
 }

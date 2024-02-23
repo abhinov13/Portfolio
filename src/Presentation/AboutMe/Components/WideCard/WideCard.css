@@ -1,4 +1,4 @@
-.card{
+.card {
     width: 100%;
     min-height: 60vh;
     display: flex;
@@ -9,7 +9,7 @@
     scroll-snap-align: center;
 }
 
-.card>div{
+.card>div {
     flex-shrink: 0;
     min-height: 100%;
     width: 45%;
@@ -20,8 +20,8 @@
     transition: all 0.5s ease-out;
 }
 
-img{
+.card img {
     height: 100%;
     width: 100%;
-    aspect-ratio: 1/1;
+    object-fit: contain;
 }

@@ -1,0 +1,62 @@
+.carouselWrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+}
+
+.carousel {
+    flex: 1;
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+}
+
+.carousel>div {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.arrows {
+    min-height: 20px;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.dots {
+    height: 80%;
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+}
+
+.arrow {
+    transition: all 0.2s ease-in;
+    width: fit-content;
+    padding-left: 5%;
+    padding-right: 5%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.arrow:hover {
+    background-color: #e84118;
+}
+
+.arrow>img {
+    height: 50%;
+    object-fit: contain;
+    bottom: 0;
+}

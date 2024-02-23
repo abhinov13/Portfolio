@@ -8,18 +8,16 @@ const Menu = () => {
     const {
         options,
         links,
-        close,
-        open,
+        setOpen,
         isOpen
     } = MenuViewModel();
 
     return <div className={`Menu${isOpen? "": " close"}`}>
         <div className="ToggleButton" >
-            <HamCrossButton lineStyle={{ backgroundColor: "white" }} whenHam={() => close()} whenCross={() => open()} crossStyle={{backgroundColor: "black"}} />
+            <HamCrossButton isOpen={isOpen} lineStyle={{ backgroundColor: "white" }} setOpen={setOpen} crossStyle={{backgroundColor: "black"}} />
         </div>
         <div className="Options">
             {options.map((section) => (<div><Navbutton name={section} underlineStyle={{ backgroundColor: "black" }} textStyle={{ color: "black" }} /></div>))}
-
         </div>
         <div className="links">
             {links.map(({ src, link }) => (<a href={link} ><img src={src} alt="link" /></a>))}

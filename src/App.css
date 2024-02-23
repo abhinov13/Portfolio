@@ -13,14 +13,12 @@ a {
 }
 
 .App {
-    position: absolute;
-    width: 100vw;
+    position: fixed;
     color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    background-color: black;
     height: 100vh;
+    width: 100vw;
+    overflow: scroll;
 }
 
 .AboutMe {

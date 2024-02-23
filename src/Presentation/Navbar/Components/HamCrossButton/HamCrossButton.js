@@ -1,17 +1,16 @@
 import AnimationHamCross from "./AnimationHamCross";
 import './HamCross.css';
 
-const HamCrossButton = ({lineStyle, parentStyle, whenHam, whenCross, crossStyle, crossParentStyle}) => {
+const HamCrossButton = ({lineStyle, parentStyle, crossStyle, crossParentStyle, isOpen, setOpen}) => {
 
     const {
-        mode,
         changeMode
-    } = AnimationHamCross(whenHam, whenCross);
+    } = AnimationHamCross(isOpen, setOpen);
 
-    return <div className={`base ${mode === "cross" ? "open" : ""}`} style={{...parentStyle, ...(mode==="cross"? crossParentStyle: {})}} onClick={() => changeMode()}>
-        <div style={{...lineStyle, ...(mode==="cross"? crossStyle: {})}} />
+    return <div className={`base ${isOpen ? "open" : ""}`} style={{...parentStyle, ...(isOpen ? crossParentStyle: {})}} onClick={() => changeMode()}>
+        <div style={{...lineStyle, ...(isOpen ? crossStyle: {})}} />
         <div style={lineStyle} />
-        <div style={{...lineStyle, ...(mode==="cross"? crossStyle: {})}} />
+        <div style={{...lineStyle, ...(isOpen ? crossStyle: {})}} />
     </div>
 }
 

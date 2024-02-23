@@ -11,10 +11,10 @@ const Navbar = () => {
     } = NavbarViewHandler();
 
     return <div className="navbar">
-        <div ref={titleRef} > <img src="/logo.svg" style={{ height: "100%" }} alt="logo" /> </div>
+        <div ref={titleRef} style={{ fontSize: "xx-large" }}> am<span style={{ color: "#c23616" }}>.</span> </div>
         <div style={{ flexGrow: "1" }} />
         <Menu />
-{/*        <div style={style.navbutton} ><Navbutton name="About" link="/" /></div>
+        {/*        <div style={style.navbutton} ><Navbutton name="About" link="/" /></div>
         <div style={style.navbutton} ><Navbutton name="Project" link="/" /></div>
         <div style={style.navbutton} ><Navbutton name="Contact" link="/" /></div>*/}
     </div>

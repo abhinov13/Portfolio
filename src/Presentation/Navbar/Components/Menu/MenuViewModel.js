@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MenuViewModel = () => {
 
@@ -20,21 +20,12 @@ const MenuViewModel = () => {
         {src: "/gmail.svg", link: ""},
     ]
 
-    function close(){
-        console.log("setting false");
-        setOpen(false);
-    }
-
-    function open(){
-        console.log("setting true");
-        setOpen(true);
-    }
+    useEffect(() => {console.log("Updated value " + isOpen)} , [isOpen])
 
     return {
         options,
         links,
-        close,
-        open,
+        setOpen,
         isOpen
     }
 }

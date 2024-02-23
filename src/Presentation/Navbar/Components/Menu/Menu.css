@@ -20,7 +20,7 @@
 
 .ToggleButton {
     position: absolute;
-    min-width: 3.5vh;
+    min-width: 30px;
     top: 2vh;
     aspect-ratio: 1/1;
     align-self: flex-end;
@@ -61,10 +61,10 @@
 }
 
 .close {
-    min-width: 5.5vh;
-    max-width: 5.5vh;
-    min-height: 5.5vh;
-    max-height: 5.5vh;
+    min-width: 3.5vh;
+    max-width: 3.5vh;
+    min-height: 3.5vh;
+    max-height: 3.5vh;
     background-color: rgba(0, 0, 0, 0);
 }
 

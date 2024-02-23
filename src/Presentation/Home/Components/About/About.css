@@ -1,0 +1,26 @@
+.about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about>div {
+    overflow: hidden;
+    width: 40%;
+}
+
+.aboutImg{
+    height: 100vh;
+}
+
+.aboutImg>img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.aboutCarousel{
+    min-height: 150px;
+    height: 60%;
+}

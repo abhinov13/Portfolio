@@ -1,26 +1,20 @@
 import { useEffect, useState } from "react";
 
-const AnimationHamCross = (whenHam, whenCross) => {
+const AnimationHamCross = (isOpen, setOpen) => {
 
-    const [mode,setMode] = useState("ham");
-    useEffect(() => {
-        whenHam();
-    }, [whenHam])
     function changeToHam()
     {
-        whenHam();
-        setMode("ham");
+        setOpen(false);
     }
 
     function changeToCross()
     {
-        whenCross();
-        setMode("cross");
+        setOpen(true);
     }
 
     function changeMode()
     {
-        if(mode === "ham")
+        if(!isOpen)
         {
             changeToCross();
         }
@@ -29,7 +23,6 @@ const AnimationHamCross = (whenHam, whenCross) => {
         }
     }
     return {
-        mode,
         changeMode
     }
 }
