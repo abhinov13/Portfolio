@@ -19,6 +19,7 @@
     flex-shrink: 0;
     height: 100%;
     width: 100%;
+    transition: all 1.2s ease-in;
 }
 
 .arrows {

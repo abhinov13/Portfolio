@@ -12,7 +12,7 @@ const Carousel = ({ views }) => {
 
     return <div className="carouselWrapper">
         <div className="carousel" ref={carouselRef}>
-            {views.map((view, index) => <CarouselDecorator view={view} onVisible={() => { setActive(index) }} />)};
+            {views.map((view, index) => <CarouselDecorator view={view} onVisible={() => { setActive(index) }} />)}
         </div>
 
         <div className="arrows">

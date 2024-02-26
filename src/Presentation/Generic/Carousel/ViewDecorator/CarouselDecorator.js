@@ -6,7 +6,7 @@ const CarouselDecorator = ({ onVisible, view }) => {
     useEffect(() => {
         if (inView) onVisible();
     }, [inView]);
-    return <div ref={ref} className="carouselDecorator">
+    return <div ref={ref} className="carouselDecorator" style={inView? {opacity: "1"} : {opacity: "0"}}>
         {view}
     </div>
 }

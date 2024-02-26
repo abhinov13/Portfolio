@@ -10,7 +10,7 @@
     width: 40%;
 }
 
-.aboutImg{
+.aboutImg {
     height: 100vh;
 }
 
@@ -20,7 +20,7 @@
     object-fit: contain;
 }
 
-.aboutCarousel{
+.aboutCarousel {
     min-height: 150px;
     height: 60%;
 }

@@ -5,6 +5,17 @@ const CarouselViewModel = (length) => {
 
     const [active, setActive] = useState(0);
     const carouselRef = useRef();
+    const inter = useRef();
+
+    useEffect(() => {
+        inter.current = setInterval(scrollRight, 6000);
+        return () => clearInterval(inter.current);
+    })
+
+    function resetInterval() {
+        clearInterval(inter.current);
+        inter.current = setInterval(scrollRight, 6000);
+    }
 
     function scroll(num) {
         carouselRef.current.scrollBy({ left: num, behavior: "smooth" })
@@ -19,31 +30,23 @@ const CarouselViewModel = (length) => {
     }
 
     function scrollRight() {
-        /*if (carouselRef.current.scrollLeft >= (length - 1) * carouselRef.current.clientWidth) carouselRef.current.scrollLeft = 0;
-        else carouselRef.current.scrollLeft += 100;
-        console.log(carouselRef.current.scrollLeft);*/
-        if(get() >= (length-1) * width())
-        {
-            scroll(get()*(-1));
+        if (get() >= (length - 1) * width()) {
+            scroll(get() * (-1));
         }
-        else
-        {
+        else {
             scroll(width());
         }
+        resetInterval();
     }
 
     function scrollLeft() {
-        /*console.log("second " + carouselRef.current.scrollLeft === 0);
-        if(carouselRef.current.scrollLeft === 0) carouselRef.current.scrollLeft += length * carouselRef.current.clientWidth;
-        else carouselRef.current.scrollLeft -= 100;
-        console.log(carouselRef.current.scrollLeft);*/
-        if(get() === 0)
-        {
-            scroll((length-1)*width());
+        if (get() === 0) {
+            scroll((length - 1) * width());
         }
-        else{
-            scroll((-1)*width())
+        else {
+            scroll((-1) * width())
         }
+        resetInterval();
     }
 
     return {
