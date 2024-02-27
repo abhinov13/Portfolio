@@ -1,0 +1,70 @@
+.Service {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 90%;
+    width: 90%;
+    padding: 4%;
+}
+
+.Service>div{
+    transition: all 0.4s ease-in;
+}
+
+.Service>.Heading {
+    opacity: 1;
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 0;
+    flex-shrink: 0;
+    color: white;
+    font-size: xx-large;
+}
+
+.ImageHolder{
+    height: 25%;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+}
+
+.Title{
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ImageHolder>img {
+    object-fit: contain;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.Service>.Description {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: -90%;
+}
+
+.Service:hover .Heading{
+    opacity: 0;
+}
+
+.Service:hover .Description{
+    opacity: 1;
+}

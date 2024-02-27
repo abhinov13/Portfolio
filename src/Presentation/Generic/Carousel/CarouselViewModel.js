@@ -8,13 +8,13 @@ const CarouselViewModel = (length) => {
     const inter = useRef();
 
     useEffect(() => {
-        inter.current = setInterval(scrollRight, 6000);
+        inter.current = setInterval(scrollRight, 3000);
         return () => clearInterval(inter.current);
     })
 
     function resetInterval() {
         clearInterval(inter.current);
-        inter.current = setInterval(scrollRight, 6000);
+        inter.current = setInterval(scrollRight, 3000);
     }
 
     function scroll(num) {
